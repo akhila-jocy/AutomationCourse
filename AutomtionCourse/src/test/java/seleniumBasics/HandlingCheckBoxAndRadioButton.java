@@ -18,6 +18,7 @@ public class HandlingCheckBoxAndRadioButton extends Base{
 	{
 		WebElement radioButton1 = driver.findElement(By.xpath("//input[@value='yellow']"));
 		radioButton1.click();
+		System.out.println(radioButton1.isSelected()); //isselected true or false?
 	}
 	public static void main(String[] args) {
 		HandlingCheckBoxAndRadioButton obj = new HandlingCheckBoxAndRadioButton();
