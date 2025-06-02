@@ -23,16 +23,14 @@ public class LoginPage {
 	
 	
 	
-	public void enterUsernameOnUsernameField()
+	public void enterUsernameOnUsernameField(String username)
 	{
-		usernameField.sendKeys("standard_user");
+		usernameField.sendKeys(username);
 	}
-	
-	public void enterPasswordOnpasswordField()
+	public void enterPasswordOnpasswordField(String password)
 	{
-		passwordField.sendKeys("secret_sauce");
+		passwordField.sendKeys(password);
 	}
-	
 	public void clickOnLoginButton()
 	{
 		loginButton.click();
