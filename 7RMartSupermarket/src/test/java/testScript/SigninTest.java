@@ -48,8 +48,8 @@ public class SigninTest extends Base{
 	@Test
 	public void verifyUserSigninWithInvalidCredentials() throws IOException
 	{
-		String username = ExcelUtility.getStringData(0, 0,"SigninPage");
-		String password = ExcelUtility.getStringData(0, 1,"SigninPage");
+		String username = ExcelUtility.getStringData(3, 0,"SigninPage");
+		String password = ExcelUtility.getStringData(3, 1,"SigninPage");
 		SigninPage signinPage = new SigninPage(driver);
 		signinPage.enterUsernameOnUsernameField(username);
 		signinPage.enterPasswordOnpasswordField(password);

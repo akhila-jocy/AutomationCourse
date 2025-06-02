@@ -2,20 +2,20 @@
 <testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-02T20:24:13 IST" name="Default suite" finished-at="2025-06-02T20:24:30 IST" duration-ms="17001">
+  <suite started-at="2025-06-03T00:37:34 IST" name="Default suite" finished-at="2025-06-03T00:37:40 IST" duration-ms="5574">
     <groups>
     </groups>
-    <test started-at="2025-06-02T20:24:13 IST" name="Default test" finished-at="2025-06-02T20:24:30 IST" duration-ms="17001">
+    <test started-at="2025-06-03T00:37:34 IST" name="Default test" finished-at="2025-06-03T00:37:40 IST" duration-ms="5574">
       <class name="testScript.LoginTest">
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testScript.LoginTest@4afcd809]" started-at="2025-06-02T20:24:13 IST" name="initializeBrowser" finished-at="2025-06-02T20:24:28 IST" duration-ms="14751" status="PASS">
+        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testScript.LoginTest@4afcd809]" started-at="2025-06-03T00:37:34 IST" name="initializeBrowser" finished-at="2025-06-03T00:37:39 IST" duration-ms="4314" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyUserLoginWithValidUsernameAndInvalidPassword()[pri:0, instance:testScript.LoginTest@4afcd809]" started-at="2025-06-02T20:24:28 IST" name="verifyUserLoginWithValidUsernameAndInvalidPassword" finished-at="2025-06-02T20:24:30 IST" duration-ms="2183" status="PASS">
+        <test-method signature="verifyUserLoginWithInvalidCredentials()[pri:0, instance:testScript.LoginTest@4afcd809]" started-at="2025-06-03T00:37:39 IST" name="verifyUserLoginWithInvalidCredentials" finished-at="2025-06-03T00:37:40 IST" duration-ms="1209" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserLoginWithValidUsernameAndInvalidPassword -->
-        <test-method is-config="true" signature="browserClose()[pri:0, instance:testScript.LoginTest@4afcd809]" started-at="2025-06-02T20:24:30 IST" name="browserClose" finished-at="2025-06-02T20:24:30 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- verifyUserLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:testScript.LoginTest@4afcd809]" started-at="2025-06-03T00:37:40 IST" name="browserClose" finished-at="2025-06-03T00:37:40 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClose -->
