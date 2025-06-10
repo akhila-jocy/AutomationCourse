@@ -2,14 +2,15 @@ package testScript;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
-import pages.LogoutPage;
+import pages.HomePage;
 import pages.SigninPage;
 import utilities.ExcelUtility;
 
-public class LogoutTest extends Base{
+public class HomeTest extends Base{
 
 	
 	@Test
@@ -22,10 +23,11 @@ public class LogoutTest extends Base{
 		signinPage.enterPasswordOnpasswordField(password);
 		signinPage.clickOnSigninButton();
 		
-		LogoutPage logoutPage = new LogoutPage(driver);
-		logoutPage.clickOnadmindropdownLink();
-		logoutPage.clickOnLogoutOption();
-		
+		HomePage homePage = new HomePage(driver);
+		homePage.clickOnadmindropdownLink();
+		homePage.clickOnLogoutOption();
+		boolean isSigninPageDisplayed = homePage.signinPageDisplayed();
+		Assert.assertTrue(isSigninPageDisplayed,"User was unable to logout");
 		
 	}
 }
