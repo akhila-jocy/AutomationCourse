@@ -53,6 +53,7 @@ public class ManagecategoriesPage {
 	{
 		imageUpload.sendKeys(Constant.TESTIMAGEFILE);
 	}
+	
 	public void showOnTopMenuRadioButton()
 	{
 		//notShowOnTopMenuRadioButton.click();
