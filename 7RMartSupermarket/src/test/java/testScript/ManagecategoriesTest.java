@@ -9,10 +9,11 @@ import automationCore.Base;
 import pages.ManagecategoriesPage;
 import pages.SigninPage;
 import utilities.ExcelUtility;
+import utilities.RandomDataUtility;
 
 public class ManagecategoriesTest extends Base{
 
-	@Test
+	@Test(description="Adding new category into the category list by entering category informations.")
 	public void verifyWhetherUserAbleToAddNewCategory() throws IOException
 	{
 		String username = ExcelUtility.getStringData(0, 0,"SigninPage");
@@ -30,13 +31,13 @@ public class ManagecategoriesTest extends Base{
 		String expected = "Add Category";
 		Assert.assertEquals(actual, expected,"User was unable to Navigate to Add Category page");
 		
-		String category = ExcelUtility.getStringData(2, 0,"ManageCategoriesPage");
+		RandomDataUtility random = new RandomDataUtility();
+		String category = random.createRandomCategoryNames(); //faker
 		manageCategories.enterCategoryInCategoryField(category);
 		manageCategories.clickOnDiscount();
-		manageCategories.scrollDown();
 		manageCategories.clickOnFileUploadToUploadImage();
-		manageCategories.selectRadioButtons();
-		manageCategories.scrollDown();
+		manageCategories.showOnTopMenuRadioButton();
+		manageCategories.showOnLeftMenuRadioButton();
 		manageCategories.saveButtonToSavecategory();
 		
 		

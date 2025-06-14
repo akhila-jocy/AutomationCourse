@@ -12,7 +12,7 @@ import utilities.ExcelUtility;
 public class ManageNewsTest extends Base{
 	
 	
-	@Test
+	@Test(description="Adding new news into the Manage news list")
 	public void verifyWhetherUserAbleToAddNewNews() throws IOException
 	{
 		String username = ExcelUtility.getStringData(0, 0,"SigninPage");
@@ -31,7 +31,7 @@ public class ManageNewsTest extends Base{
 	}
 	
 	
-	@Test
+	@Test(description="Searching news from the news list")
 	public void verifyWhetherUserAbleToSearchNews() throws IOException
 	{
 		String username = ExcelUtility.getStringData(0, 0,"SigninPage");

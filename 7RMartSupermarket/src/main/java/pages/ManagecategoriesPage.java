@@ -21,7 +21,7 @@ public class ManagecategoriesPage {
 	private WebElement manageCategoryMoreInfo;
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/Category/add']") private WebElement manageCategoryAddButton;
 	@FindBy(id="category") private WebElement categoryField;
-	@FindBy(id="134-selectable") private WebElement selectGroups;
+	@FindBy(id="134-selectable") private WebElement discount;
 	@FindBy(id="main_img") private WebElement imageUpload;
 	@FindBy(xpath="//input[@name='top_menu' and @value='no']") private WebElement notShowOnTopMenuRadioButton;
 	@FindBy(xpath="//input[@name='show_home' and @value='no']") private WebElement notShowOnLeftMenuRadioButton;
@@ -42,23 +42,31 @@ public class ManagecategoriesPage {
 	}
 	public void clickOnDiscount()
 	{
-		selectGroups.click();
+		discount.click();
 	}
-	public void scrollDown()
-	{
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("window.scrollBy(0,600)", "");
-	}
+//	public void scrollDown()
+//	{
+//		JavascriptExecutor js = (JavascriptExecutor)driver;
+//		js.executeScript("window.scrollBy(0,600)", "");
+//	}
 	public void clickOnFileUploadToUploadImage()
 	{
 		imageUpload.sendKeys(Constant.TESTIMAGEFILE);
 	}
-	public void selectRadioButtons()
+	public void showOnTopMenuRadioButton()
 	{
-		notShowOnTopMenuRadioButton.click();
-		notShowOnLeftMenuRadioButton.click();
+		//notShowOnTopMenuRadioButton.click();
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();",notShowOnTopMenuRadioButton);
+		js.executeScript("window.scrollBy(0,500)", "");
 	}
-
+	public void showOnLeftMenuRadioButton()
+	{
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();",notShowOnLeftMenuRadioButton);
+		js.executeScript("window.scrollBy(0,500)", "");
+		//notShowOnLeftMenuRadioButton.click();
+	}
 	public void saveButtonToSavecategory()
 	{
 		//saveButton.click();
