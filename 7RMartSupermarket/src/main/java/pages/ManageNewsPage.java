@@ -6,49 +6,54 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ManageNewsPage {
-	
-	public WebDriver driver;
-	
-	public ManageNewsPage(WebDriver driver)
-	{
-		this.driver = driver;
-		PageFactory.initElements(driver,this);
-	}
-	
-@FindBy(xpath="//a[@href=\'https://groceryapp.uniqassosiates.com/admin/list-news\' and text()=\'More info \']") private WebElement manageNewsMoreInfo;
-@FindBy(xpath="//a[@href=\'https://groceryapp.uniqassosiates.com/admin/news/add\']") private WebElement manageNewsAddButton;
-@FindBy(id="news") private WebElement newsTextArea;
-@FindBy(xpath="//button[@type='submit']") private WebElement saveButton;
-@FindBy(xpath="//a[text()=' Search']") private WebElement searchButton;
-@FindBy(xpath="//input[@class='form-control']") private WebElement newsTitleInputField;
-@FindBy(xpath="//button[@type='submit']") private WebElement searchButtonToSubmitNews;
 
-	public void clickOnManageNewsTileMoreInfo()
-	{
-		manageNewsMoreInfo.click();
+	public WebDriver driver;
+
+	public ManageNewsPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
-	public void clickOnManageNewsAddButton()
-	{
+
+	@FindBy(xpath = "//a[@href=\'https://groceryapp.uniqassosiates.com/admin/news/add\']")
+	private WebElement manageNewsAddButton;
+	@FindBy(id = "news")
+	private WebElement newsTextArea;
+	@FindBy(xpath = "//button[@type='submit']")
+	private WebElement saveButton;
+	@FindBy(xpath = "//a[text()=' Search']")
+	private WebElement searchButton;
+	@FindBy(xpath = "//input[@class='form-control']")
+	private WebElement newsTitleInputField;
+	@FindBy(xpath = "//button[@type='submit']")
+	private WebElement searchButtonToSubmitNews;
+
+	public ManageNewsPage clickOnManageNewsAddButton() {
 		manageNewsAddButton.click();
+		return this;
 	}
-	public void enterNewsOnNewsField(String news)
-	{
+
+	public ManageNewsPage enterNewsOnNewsField(String news) {
 		newsTextArea.sendKeys(news);
+		return this;
 	}
-	public void clickSaveButtonToSaveNews()
-	{
+
+	public ManageNewsPage clickSaveButtonToSaveNews() {
 		saveButton.click();
+		return this;
 	}
-	public void clickOnSearchButton()
-	{
+
+	public ManageNewsPage clickOnSearchButton() {
 		searchButton.click();
+		return this;
 	}
-	public void enterNewsTitleToSearch(String searchNews)
-	{
+
+	public ManageNewsPage enterNewsTitleToSearch(String searchNews) {
 		newsTitleInputField.sendKeys(searchNews);
+		return this;
 	}
-	public void clickOnSearchButtonToSearchNews()
-	{
+
+	public ManageNewsPage clickOnSearchButtonToSearchNews() {
 		searchButtonToSubmitNews.click();
+		return this;
 	}
 }

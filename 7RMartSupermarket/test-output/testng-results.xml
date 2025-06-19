@@ -1,99 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-12T20:57:11 IST" name="Suite" finished-at="2025-06-12T20:57:33 IST" duration-ms="22648">
+  <suite started-at="2025-06-19T18:35:02 IST" name="Suite" finished-at="2025-06-19T18:35:08 IST" duration-ms="6682">
     <groups>
     </groups>
-    <test started-at="2025-06-12T20:57:11 IST" name="chrometest" finished-at="2025-06-12T20:57:15 IST" duration-ms="4590">
-      <class name="testScript.HomeTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testScript.HomeTest@55141def]" started-at="2025-06-12T20:57:11 IST" name="initializeBrowser" finished-at="2025-06-12T20:57:13 IST" duration-ms="2610" status="PASS">
+    <test started-at="2025-06-19T18:35:02 IST" name="Test" finished-at="2025-06-19T18:35:08 IST" duration-ms="6682">
+      <class name="testScript.ManagecategoriesTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testScript.ManagecategoriesTest@169bb4dd]" started-at="2025-06-19T18:35:02 IST" name="initializeBrowser" finished-at="2025-06-19T18:35:04 IST" duration-ms="2735" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[Chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyWhetherUserAbleToLogout()[pri:0, instance:testScript.HomeTest@55141def]" started-at="2025-06-12T20:57:13 IST" name="verifyWhetherUserAbleToLogout" description="logout from home page." finished-at="2025-06-12T20:57:15 IST" duration-ms="1932" status="PASS">
+        <test-method signature="verifyWhetherUserAbleToAddNewCategory()[pri:0, instance:testScript.ManagecategoriesTest@169bb4dd]" started-at="2025-06-19T18:35:04 IST" name="verifyWhetherUserAbleToAddNewCategory" description="Adding new category into the category list by entering category informations." finished-at="2025-06-19T18:35:08 IST" duration-ms="3895" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyWhetherUserAbleToLogout -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.HomeTest@55141def]" started-at="2025-06-12T20:57:15 IST" name="driverQuit" finished-at="2025-06-12T20:57:15 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- verifyWhetherUserAbleToAddNewCategory -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.ManagecategoriesTest@169bb4dd]" started-at="2025-06-19T18:35:08 IST" name="driverQuit" finished-at="2025-06-19T18:35:08 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyWhetherUserAbleToLogout status=SUCCESS method=HomeTest.verifyWhetherUserAbleToLogout()[pri:0, instance:testScript.HomeTest@55141def] output={null}]]]>
+                <![CDATA[[TestResult name=verifyWhetherUserAbleToAddNewCategory status=SUCCESS method=ManagecategoriesTest.verifyWhetherUserAbleToAddNewCategory()[pri:0, instance:testScript.ManagecategoriesTest@169bb4dd] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testScript.HomeTest -->
-    </test> <!-- chrometest -->
-    <test started-at="2025-06-12T20:57:15 IST" name="edgetest" finished-at="2025-06-12T20:57:22 IST" duration-ms="6343">
-      <class name="testScript.HomeTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testScript.HomeTest@fbd1f6]" started-at="2025-06-12T20:57:15 IST" name="initializeBrowser" finished-at="2025-06-12T20:57:20 IST" duration-ms="4519" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyWhetherUserAbleToLogout()[pri:0, instance:testScript.HomeTest@fbd1f6]" started-at="2025-06-12T20:57:20 IST" name="verifyWhetherUserAbleToLogout" description="logout from home page." finished-at="2025-06-12T20:57:22 IST" duration-ms="1818" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWhetherUserAbleToLogout -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.HomeTest@fbd1f6]" started-at="2025-06-12T20:57:22 IST" name="driverQuit" finished-at="2025-06-12T20:57:22 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyWhetherUserAbleToLogout status=SUCCESS method=HomeTest.verifyWhetherUserAbleToLogout()[pri:0, instance:testScript.HomeTest@fbd1f6] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-      </class> <!-- testScript.HomeTest -->
-    </test> <!-- edgetest -->
-    <test started-at="2025-06-12T20:57:22 IST" name="firefoxtest" finished-at="2025-06-12T20:57:33 IST" duration-ms="11683">
-      <class name="testScript.HomeTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testScript.HomeTest@5dda768f]" started-at="2025-06-12T20:57:22 IST" name="initializeBrowser" finished-at="2025-06-12T20:57:31 IST" duration-ms="8955" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyWhetherUserAbleToLogout()[pri:0, instance:testScript.HomeTest@5dda768f]" started-at="2025-06-12T20:57:31 IST" name="verifyWhetherUserAbleToLogout" description="logout from home page." finished-at="2025-06-12T20:57:33 IST" duration-ms="2724" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWhetherUserAbleToLogout -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.HomeTest@5dda768f]" started-at="2025-06-12T20:57:33 IST" name="driverQuit" finished-at="2025-06-12T20:57:33 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyWhetherUserAbleToLogout status=SUCCESS method=HomeTest.verifyWhetherUserAbleToLogout()[pri:0, instance:testScript.HomeTest@5dda768f] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-      </class> <!-- testScript.HomeTest -->
-    </test> <!-- firefoxtest -->
+      </class> <!-- testScript.ManagecategoriesTest -->
+    </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

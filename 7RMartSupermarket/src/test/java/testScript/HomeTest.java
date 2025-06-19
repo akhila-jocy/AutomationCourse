@@ -10,24 +10,21 @@ import pages.HomePage;
 import pages.SigninPage;
 import utilities.ExcelUtility;
 
-public class HomeTest extends Base{
+public class HomeTest extends Base {
 
-	
-	@Test(description="logout from home page.")
-	public void verifyWhetherUserAbleToLogout() throws IOException
-	{
-		String username = ExcelUtility.getStringData(0, 0,"SigninPage");
-		String password = ExcelUtility.getStringData(0, 1,"SigninPage");
+	@Test(description = "logout from home page.")
+	public void verifyWhetherUserAbleToLogout() throws IOException {
+		HomePage homePage;
+		String username = ExcelUtility.getStringData(0, 0, "SigninPage");
+		String password = ExcelUtility.getStringData(0, 1, "SigninPage");
 		SigninPage signinPage = new SigninPage(driver);
-		signinPage.enterUsernameOnUsernameField(username);
-		signinPage.enterPasswordOnpasswordField(password);
-		signinPage.clickOnSigninButton();
-		
-		HomePage homePage = new HomePage(driver);
+		signinPage.enterUsernameOnUsernameField(username).enterPasswordOnpasswordField(password);
+		homePage=signinPage.clickOnSigninButton();
+
 		homePage.clickOnadmindropdownLink();
-		homePage.clickOnLogoutOption();
+		signinPage=homePage.clickOnLogoutOption();
 		boolean isSigninPageDisplayed = homePage.signinPageDisplayed();
-		Assert.assertTrue(isSigninPageDisplayed,"User was unable to logout");
-		
+		Assert.assertTrue(isSigninPageDisplayed, "User was unable to logout");
+
 	}
 }
