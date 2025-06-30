@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
+import constants.Messages;
 import pages.HomePage;
 import pages.ManagecategoriesPage;
 import pages.SigninPage;
@@ -32,7 +33,7 @@ public class ManagecategoriesTest extends Base {
 				.clickOnSaveButtonToSavecategory();
 		String actual = manageCategories.addcategoryDisplayed();
 		String expected = "Add Category";
-		Assert.assertEquals(actual, expected, "User was unable to Navigate to Add Category page");
+		Assert.assertEquals(actual, expected,Messages.ADD_CATEGORY_PAGE_NAVIGATION_ERROR);
 
 	}
 }

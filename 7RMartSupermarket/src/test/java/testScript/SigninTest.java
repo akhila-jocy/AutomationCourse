@@ -7,6 +7,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
+import constants.Messages;
 import pages.HomePage;
 import pages.SigninPage;
 import utilities.ExcelUtility;
@@ -27,7 +28,7 @@ public class SigninTest extends Base {
 		// credentials");
 		String actual = signinPage.dashboardDisplayed();
 		String expected = "Dashboard";
-		Assert.assertEquals(actual, expected, "User was unable to login with valid credentials");
+		Assert.assertEquals(actual, expected,Messages.VALIDCREDENTIALERROR);
 
 	}
 

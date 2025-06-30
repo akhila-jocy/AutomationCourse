@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
+import constants.Messages;
 import pages.AdminUsersPage;
 import pages.HomePage;
 import pages.SigninPage;
@@ -27,13 +28,13 @@ public class AdminUsersTest extends Base {
 		adminUsersPage = homePage.clickOnAdminUsersMoreInfo();
 		adminUsersPage.clickOnNewButtonInAdminUsersPage();
 
-		boolean isAddAdminUsersPageDisplayed = adminUsersPage.addAdminUsersPageDisplayed();
-		Assert.assertTrue(isAddAdminUsersPageDisplayed, "User was unable to navigate to Add New Admin Users Page");
 		RandomDataUtility random = new RandomDataUtility();
 		String adminUsername = random.createRandomUsername(); // Testdata using faker
 		String adminPassword = random.createRandomPassword();
 		adminUsersPage.enterUsernameonUsernameField(adminUsername).enterPasswordonPasswordField(adminPassword)
 				.selectUserTypefromUserTypeDropDown().clickOnSaveButton();
+		boolean isAddAdminUsersPageDisplayed = adminUsersPage.addAdminUsersPageDisplayed();
+		Assert.assertTrue(isAddAdminUsersPageDisplayed,Messages.ADD_ADMIN_USERS_PAGE_NAVIGATION_ERROR);
 	}
 
 	@Test(description = "Searching users using username and userType")
@@ -49,11 +50,10 @@ public class AdminUsersTest extends Base {
 		adminUsersPage = homePage.clickOnAdminUsersMoreInfo();
 		adminUsersPage.clickOnSearchButtonInAdminUsersPage();
 
-		boolean isAdminUsersSearchPageDisplayed = adminUsersPage.adminUsersSearchPageDisplayed();
-		Assert.assertTrue(isAdminUsersSearchPageDisplayed, "User was unable to navigate to  Admin Users Search Page");
-
 		String adminUsername = ExcelUtility.getStringData(0, 0, "AdminUsersPage");
 		adminUsersPage.enterUsernameToSearchAdminUser(adminUsername).selectUserTypeFromDropdownToSearch()
 				.clickOnSearchButtonToSearchAdminUsers();
+		boolean isAdminUsersSearchPageDisplayed = adminUsersPage.adminUsersSearchPageDisplayed();
+		Assert.assertTrue(isAdminUsersSearchPageDisplayed,Messages.SEARCH_ADMIN_USER_PAGE_NAVIGATION_ERROR);
 	}
 }

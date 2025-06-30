@@ -12,12 +12,12 @@ import com.aventstack.extentreports.Status;
 import automationCore.Base;
 import utilities.ExtentReportUtility;
 
-public class Listener extends Base implements ITestListener{
+public class Listener extends Base implements ITestListener{          //listener is interface,iTestListner is predefined listener in Testng
 	ExtentTest test;
-	ExtentReports extent=ExtentReportUtility.createExtentReports();
+	ExtentReports extent=ExtentReportUtility.createExtentReports();    //config of extendReport
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 
-	public void onTestStart(ITestResult result) {
+	public void onTestStart(ITestResult result) { 
 
 	ITestListener.super.onTestStart(result);
 	test = extent.createTest(result.getMethod().getMethodName());
@@ -71,17 +71,17 @@ public class Listener extends Base implements ITestListener{
 
 	}
 
-	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {  //1 out of 10 tests fail, this method is triggered.
 
 	ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
 	}
 
-	public void onTestFailedWithTimeout(ITestResult result) {
+	public void onTestFailedWithTimeout(ITestResult result) { //runs when a test fails because it took too long to finish — it timed out.
 
 	ITestListener.super.onTestFailedWithTimeout(result);
 	}
 
-	public void onStart(ITestContext context) {
+	public void onStart(ITestContext context) { //runs before the first test method in a class.
 
 	ITestListener.super.onStart(context);
 	}

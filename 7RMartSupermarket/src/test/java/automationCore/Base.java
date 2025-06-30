@@ -46,13 +46,13 @@ public class Base {
 		waitUtility.implicitWait(driver);
 	}
 
-	@AfterMethod(alwaysRun = true)
+	@AfterMethod(alwaysRun = true) //alwaysRun = true: method will run no matter what, even if the test method fails, is skipped, or throws an exception.
 	public void driverQuit(ITestResult iTestResult) throws IOException {
 		if (iTestResult.getStatus() == ITestResult.FAILURE) {
 			ScreenShotUtility screenShot = new ScreenShotUtility();
 			screenShot.getScreenshot(driver, iTestResult.getName());
 		}
-		//driver.quit();
+		driver.quit();
 
 	}
 }
